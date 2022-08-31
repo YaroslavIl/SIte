@@ -62,9 +62,10 @@ body{
 	text-transform: uppercase;
 	letter-spacing: 0.16em;
 	color: #000000;
-	@media (max-width: 1150px) {
-		color: #868585
+	@media (max-width: 400px) {
+		font-size: 26px;
 	}
+	
 }
 
 .suptitle {
@@ -178,6 +179,9 @@ header{
 		text-transform: uppercase;
 		letter-spacing: 0.16em;
 		color: #ffffff;
+		@media (max-width: 400px) {
+			font-size: 26px;
+		}
 	}
 
 	&__subtitle {
@@ -186,12 +190,15 @@ header{
 		text-transform: none;
 		letter-spacing: 0.16em;
 		color: #ffffff;
+		@media (max-width: 400px) {
+			font-size: 20px;
+		}
 	}
 
 	&__button {
 		text-align: center;
 		&:after{
-			content: url('../../img/mein_block/arrow_down.png');
+			content: url('../img/mein_block/arrow_down.png');
 			display: block;
 			margin-top: 75px;
 		}
@@ -241,6 +248,12 @@ header{
 	&__title {
 		padding: 130px 0 0 0;
 		max-width: 690px;
+		@media (max-width: 700px) {
+			padding: 80px 0 0 0;
+		}
+		@media (max-width: 400px) {
+			padding: 40px 0 0 0;
+		}
 	}
 
 	&__h1 {
@@ -273,7 +286,13 @@ header{
 		padding: 69px 0 0 0;
 		display: flex;
 		max-width: 900px;
-
+		@media (max-width: 700px) {
+			flex-direction: column;
+			padding: 40px 0 0 0;
+		}
+		@media (max-width: 400px) {
+			padding: 5px 0 0 0;
+		}
 	}
 
 	&__box {
@@ -282,6 +301,10 @@ header{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		@media (max-width: 700px) {
+			max-width: 400px;
+			padding-top: 20px;
+		}
 	}
 
 	&__icon {
@@ -320,6 +343,9 @@ header{
 	&__title {
 		padding-top: 100px;
 		text-align: center;
+		@media (max-width: 400px) {
+			padding-top: 50px;
+		}
 		&:after{
 			content: '';
 			width: 81px;
@@ -327,6 +353,10 @@ header{
 			background-color: #000000;
 			display: block;
 			margin: 40px auto 50px;
+			@media (max-width: 400px) {
+				margin: 20px auto 25px;
+
+			}
 		}
 	}
 
@@ -343,7 +373,9 @@ header{
 		padding-top: 135px;
 		@media (max-width: 1150px){
 			padding-top: 70px;
-
+		}
+		@media (max-width: 400px){
+			padding-top: 30px;
 		}
 	}
 
@@ -421,7 +453,8 @@ header{
 	background: url('../img/partners/1\ \(1\).jpg') bottom/100% no-repeat;
 	padding: 100px 0;
 	@media (max-width: 700px) {
-		padding: 50px 0;
+		padding: 0;
+		background: url('../img/partners/1\ \(1\).jpg') 0 0/auto 100% no-repeat;
 	}
 
 	&__conteiner {
@@ -445,6 +478,12 @@ header{
 		align-items: center;
 		width: 60%;
 		justify-content: space-around;
+		@media (max-width: 700px) {
+			flex-direction: column;
+			& img{
+				padding: 30px 0 20px 0;
+			}
+		}
 	}
 }
 
@@ -458,6 +497,12 @@ header{
 	&__title {
 		text-align: center;
 		padding: 180px 0 0 0;
+		@media (max-width: 700px) {
+			padding: 100px 0 0 0;
+			@media (max-width: 400px){
+				padding-top: 50px;
+			}
+		}
 		&::after{
 			content: '';
 			display: block;
@@ -465,12 +510,22 @@ header{
 			height: 1px;
 			background-color: #000000;
 			margin: 45px auto 120px;
+			@media (max-width: 700px) {
+				margin: 45px auto 80px;
+			}
+			@media (max-width: 700px) {
+				margin: 25px auto 50px;
+			}
 		}
 	}
 
 	&__block-form {
 		display: flex;
 		padding: 0 20px 100px 20px;
+		@media (max-width: 700px) {
+			flex-direction: column;
+			padding: 0 20px 60px 20px;
+		}
 	}
 
 	&__left {
@@ -524,6 +579,9 @@ header{
 		justify-content: flex-start;
 		max-width: 400px;
 		margin: 0 0 0 85px;
+		@media (max-width: 700px) {
+			margin: 30px 0 0 0;
+		}
 	}
 
 	&__text {
@@ -597,11 +655,20 @@ header{
 
 	&__li{
 		padding: 0 20px;
+		@media (max-width: 400px) {
+			padding: 0 10px;
+		}
 		&:first-child{
 			padding: 0 20px 0 0;
+			@media (max-width: 400px) {
+				padding: 0 10px 0 0;
+			}
 		}
 		&:last-child{
 			padding: 0 0 0 20px;
+			@media (max-width: 400px) {
+				padding: 0 0 0 10px;
+			}
 		}
 	}
 	
@@ -625,36 +692,6 @@ header{
 
 
 
-
-
-
-.test {
-
-
-	// .test__conteiner
-
-	&__conteiner {
-
-
-	}
-
-	// .test__flex
-
-	&__flex {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-
-		border: 1px solid #000;
-		& img{
-			width: 100%;
-		}
-	}
-
-}
-.conteiner {
-}
 
 
 
