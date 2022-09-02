@@ -4,44 +4,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
-@import url(.//nullextyle.scss);
-*{
-	padding: 0;
-	margin: 0;
-	border: 0;
-}
-*,*:before,*:after{
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
-:focus,:active{outline: none;}
-a:focus,a:active{outline: none;}
 
-nav,footer,header,aside{display: block;}
 
-html,body{
-	height: 100%;
-	width: 100%;
-	font-size: 100%;
-	line-height: 1;
-	font-size: 14px;
-	-ms-text-size-adjust: 100%;
-	-moz-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-}
-input,button,textarea{font-family:inherit;}
+@import "nullextyle.scss";
 
-input::-ms-clear{display: none;}
-button{cursor: pointer;}
-button::-moz-focus-inner {padding:0;border:0;}
-a, a:visited{text-decoration: none;}
-a:hover{text-decoration: none;}
-ul li{list-style: none;}
-img{vertical-align: top;}
-
-h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
-/*--------------------*/
 
 
 
@@ -161,7 +127,6 @@ header{
 	&__title {
 		text-align: center;
 		
-
 		&:after{
 			content: '';
 			display: block;
@@ -197,12 +162,29 @@ header{
 
 	&__button {
 		text-align: center;
-		&:after{
-			content: url('../img/mein_block/arrow_down.png');
-			display: block;
-			margin-top: 75px;
-		}
 	}
+
+		// .fullscrin__arrow
+
+		&__arrow {
+			position: relative;
+			top: 0;
+			animation-name: arrow;
+			animation-duration: 1.5s;
+			animation-iteration-count: infinite;
+			animation-timing-function: ease-out;
+			& a{
+				display: inline-block;
+				height: 30px;
+			}
+		}
+
+		@keyframes arrow {
+			0%{top: 0;}
+			50%{top: 20px;}
+			100%{top: 0;}
+		}
+
 
 	&__link {
 		border: 1px solid #ffffff;
@@ -215,6 +197,17 @@ header{
 		letter-spacing: 0.06em;
 		color: #ffffff;
 		line-height: 45px;
+		transition-duration: 1s;
+		@media (max-width: 400px) {
+			width: 250px;
+		}
+		&:hover{
+			background-color: #614bd1;
+			text-shadow: 1px 1px 1px darkorange;
+			transition-duration: 2s;
+			color: darkorange;
+			border: 1px solid #000;
+		}
 	}
 }
 

@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
-@import url(.//nullextyle.scss);
 * {
   padding: 0;
   margin: 0;
@@ -232,10 +231,43 @@ header {
 .fullscrin__button {
   text-align: center;
 }
-.fullscrin__button:after {
-  content: url("../img/mein_block/arrow_down.png");
-  display: block;
-  margin-top: 75px;
+.fullscrin__arrow {
+  position: relative;
+  top: 0;
+  -webkit-animation-name: arrow;
+          animation-name: arrow;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+.fullscrin__arrow a {
+  display: inline-block;
+  height: 30px;
+}
+@-webkit-keyframes arrow {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 20px;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes arrow {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 20px;
+  }
+  100% {
+    top: 0;
+  }
 }
 .fullscrin__link {
   border: 1px solid #ffffff;
@@ -248,6 +280,21 @@ header {
   letter-spacing: 0.06em;
   color: #ffffff;
   line-height: 45px;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+@media (max-width: 400px) {
+  .fullscrin__link {
+    width: 250px;
+  }
+}
+.fullscrin__link:hover {
+  background-color: #614bd1;
+  text-shadow: 1px 1px 1px darkorange;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+  color: darkorange;
+  border: 1px solid #000;
 }
 
 .menu__list {
